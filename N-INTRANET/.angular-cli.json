@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "AppLogo.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,11 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../N-INTRANET/node_modules/materialize-css/dist/css/materialize.min.css"
+         "../node_modules/materialize-css/dist/css/materialize.min.css",
+        "styles.css"
+      
       ],
-      "scripts": ["../N-INTRANET/node_modules/materialize-css/dist/js/materialize.min.js",
-      "../N-INTRANET/node_modules/jquery/dist/jquery.min.js"],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/materialize-css/dist/js/materialize.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

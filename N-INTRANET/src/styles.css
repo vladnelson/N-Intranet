@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: url("../src/assets/images/fond.jpg") no-repeat fixed center;
+    
+}
+#Authentification{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
