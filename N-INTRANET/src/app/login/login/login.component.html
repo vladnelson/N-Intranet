@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col s3">
         <div class="input-field inline">
-          <input id="email" type="email" class="validate">
+          <input [(ngModel)]="Leslogs.Email" id="email" type="email" class="validate">
           <label for="email" data-error="wrong" data-success="right">Email</label>
         </div>
       </div>
@@ -11,11 +11,16 @@
     <div class="row">
       <div class="col s3">
         <div class="input-field inline">
-          <input id="password" type="password" class="validate">
+          <input [(ngModel)]="Leslogs.Password" id="password" type="password" class="validate">
           <label for="password" data-error="wrong" data-success="right">Mots de passe</label>
         </div>
       </div>
     </div>
-    <input class="btn waves-orange black " type="submit" value="Se Connecter">
+   
+    <button 
+    type="button"
+    (click)="Login()"
+    class="btn waves-orange black "
+  >Se Connecter</button>
   </form>
 </div>

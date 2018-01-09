@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login/login.component';
+import { AuthenficationService } from './login/login/authenfication.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -12,9 +14,13 @@ import { LoginComponent } from './login/login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    AuthenficationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
