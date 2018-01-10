@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 Login() {
-alert('C bon ');
+     alert('C bon ');
     this.service.Login(this.Leslogs).subscribe();
-  
    }
 }

@@ -24,6 +24,7 @@ export class AuthenficationService {
 
   Login(LesLogs: LoginViewModel) {
     console.log('On est dans le service web');
+    return this.http.post(this.LoginUrl, LesLogs, this.httpOptions).pipe(
       tap((value: Utilisateur) => console.log('Vous avez reussit a envoyer les informations' + value.Id,
     catchError(this.handleError('..........'))))
     );
