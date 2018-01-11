@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login/login.component';
 import { AuthenficationService } from './login/login/authenfication.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -15,8 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    FormsModule,
+    HttpModule,
+    FormsModule
   ],
   providers: [
     AuthenficationService

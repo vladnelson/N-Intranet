@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenficationService } from './authenfication.service';
 import { LoginViewModel } from '../../ViewModel/login-view-model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +10,18 @@ import { LoginViewModel } from '../../ViewModel/login-view-model';
 })
 export class LoginComponent implements OnInit {
 
-  Leslogs: LoginViewModel;
+ 
+  private a: LoginViewModel = new LoginViewModel('didimilca@live.com', 'Pas$w0rd') ;
   constructor(private service: AuthenficationService) {
 
    }
 
   ngOnInit() {
   }
-Login() {
+
+
+  Login() {
      alert('C bon ');
-    this.service.Login(this.Leslogs).subscribe();
+    this.service.Login(this.a);
    }
 }

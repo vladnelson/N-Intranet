@@ -1,18 +1,20 @@
-<div id="Authentification" class="container row " >
-  <form action="" method="get" >
+<div id="Authentification" class="row"  >
+  <form #LoginForm="ngForm" >
     <div class="row">
       <div class="col s3">
         <div class="input-field inline">
-          <input [(ngModel)]="Leslogs.Email" id="email" type="email" class="validate">
+          <input #Email="ngModel" [(ngModel)]="service.SelectedLogin.Email" id="Email" name="Email" type="Email" class="validate">
           <label for="email" data-error="wrong" data-success="right">Email</label>
+         
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col s3">
         <div class="input-field inline">
-          <input [(ngModel)]="Leslogs.Password" id="password" type="password" class="validate">
+          <input #Password="ngModel" [(ngModel)]="service.SelectedLogin.Password" id="Password" name="Password" type="Password" class="validate">
           <label for="password" data-error="wrong" data-success="right">Mots de passe</label>
+          
         </div>
       </div>
     </div>
