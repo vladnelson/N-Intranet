@@ -3,23 +3,40 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login/login.component';
-import { AuthenficationService } from './login/login/authenfication.service';
-import { HttpModule } from '@angular/http';
+import { LoginComponent } from './_View/login/login.component';
+import { AuthenficationService } from './_services/authenfication.service';
+
+import { HomeComponent } from './_View/home/home.component';
+import { RegisterComponent } from './_View/register/register.component';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AlertComponent } from './_View/alert/alert.component';
+import { AuthCouteauSuisse } from './_couteauSuisse/auth.couteauSuisse';
+
+import { TokenInterceptor } from './_couteauSuisse/TokenInterceptor';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [
-    AuthenficationService
+    AuthenficationService,
+    AuthCouteauSuisse,
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
   ],
   bootstrap: [AppComponent]
 })
